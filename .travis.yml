@@ -5,3 +5,6 @@ rvm:
 - 2.1.1
 install: bundle install
 script: bundle exec rake site:deploy --trace
+branches:
+  only:
+    - master
