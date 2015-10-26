@@ -1,0 +1,58 @@
+# General configuration
+url: https://hackandtell.ro
+baseurl: ''
+enforce_ssl: hackandtell.ro
+safe: true
+lsi: false
+sass:
+    style: compressed
+
+# Dependencies
+markdown: kramdown
+highlighter: pygments
+
+# Permalinks
+permalink: pretty
+relative_permalinks: true
+
+exclude:
+  - .travis.yml
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+
+# compass configuration
+compass:
+  # an avatar or logo (optional)
+  logo: "/images/Hack_and_Tell.svg"
+  # author will appear under the avatar (optional)
+  author: "Hack and Tell"
+  # tagline will appear under the title (optional)
+  tagline: 'The show and tell style meetup for hackers!'
+
+  title: "Hack and Tell"
+  description: >
+    H&&T is a show and tell style meetup for hackers!
+    Events are structured such that 8—10 hackers give 5 minute long
+    presentations on something they built, and then respond to Q&A
+    for 5 more minutes.
+  keywords: "hack, and, tell, hacker, social, meetup"
+
+  # if include_content is true, the contents of the content.html include will be
+  # added right above the generated item list, if present
+  include_content: true
+  # if include_analytics is true, the content of the analytics.html include will
+  # be added at the end of the <head> section. You can add your Google Analytics
+  # Tracking Code to that file.
+  include_analytics: false
+
+# Settings for deploy rake task
+username:        hackandtell-ro
+repo:            hackandtell.ro
+branch:          source
+relative_source: ../hackandtell.ro/
+destination:     ../hackandtell.ro-pages/
+production_url:  https://hackandtell.ro
+source_url:      https://github.com/hackandtell-ro/hackandtell.ro
