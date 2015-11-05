@@ -10,8 +10,8 @@ require 'date'
 require 'yaml'
 
 CONFIG = YAML.load(File.read('_config.yml'))
-USERNAME = CONFIG["username"] || ENV['GIT_NAME']
-REPO = CONFIG["repo"] || "#{USERNAME}.github.io"
+USERNAME = CONFIG["username"]
+REPO = CONFIG["repo"]
 SOURCE_BRANCH = "master"
 DESTINATION_BRANCH = "gh-pages"
 
@@ -49,8 +49,8 @@ namespace :site do
 
     # Configure git if this is run in Travis CI
     if ENV["TRAVIS"]
-      sh "git config --global user.name '$GIT_NAME'"
-      sh "git config --global user.email '$GIT_EMAIL'"
+      sh "git config --global user.name $GIT_NAME"
+      sh "git config --global user.email $GIT_EMAIL"
       sh "git config --global push.default simple"
     end
 
